@@ -85,6 +85,75 @@ public class UserController : ControllerBase
         throw new Exception("Failed to update user");
     }
 
+    // [HttpPatch("EditUserLastName")]
+    // public IActionResult EditUserLastName(User user)
+    // {
+    //     //string for udpdate statement
+    //     string sql = @"
+    //     Update TutorialAppSchema.Users
+    //         set [LastName] = '" + user.LastName +
+    //    "' WHERE UserId = " + user.UserId;
+    //     Console.WriteLine(sql);
+    //     if (_dapper.ExecuteSql(sql))
+    //     {
+    //         return Ok();
+    //     }
+
+    //     throw new Exception("Failed to update user");
+    // }
+
+    [HttpPatch("EditUserLastName")]
+    public IActionResult EditUserLastName(UserToUpdateLastNameDto user)
+    {
+        //string for udpdate statement
+        string sql = @"
+        Update TutorialAppSchema.Users
+            set [LastName] = '" + user.LastName +
+       "' WHERE UserId = " + user.UserId;
+
+        if (_dapper.ExecuteSql(sql))
+        {
+            return Ok();
+        }
+
+        throw new Exception("Failed to update user last name");
+    }
+
+    [HttpPatch("EditUserEmail")]
+    public IActionResult EditUserEmail(UserToUpdateEmailDto user)
+    {
+        //string for udpdate statement
+        string sql = @"
+        Update TutorialAppSchema.Users
+            set [Email] = '" + user.Email +
+       "' WHERE UserId = " + user.UserId;
+
+        if (_dapper.ExecuteSql(sql))
+        {
+            return Ok();
+        }
+
+        throw new Exception("Failed to update user email");
+    }
+
+
+    [HttpPatch("EditUserActive")]
+    public IActionResult EditUserActive(UserToUpdateActiveDto user)
+    {
+        //string for udpdate statement
+        string sql = @"
+        Update TutorialAppSchema.Users
+            set [Active] = '" + user.Active +
+       "' WHERE UserId = " + user.UserId;
+
+        if (_dapper.ExecuteSql(sql))
+        {
+            return Ok();
+        }
+
+        throw new Exception("Failed to update user active status");
+    }
+
 
     /// <summary>
     /// Post endpoint to add a user
@@ -116,7 +185,6 @@ public class UserController : ControllerBase
     }
 
 
-
     /// <summary>
     /// Delete endpoint to delete a user
     ///
@@ -135,9 +203,8 @@ public class UserController : ControllerBase
     }
 
 
+
     /////////////////////////////// User Salary Endpoints ///////////////////////////////////////////////
-
-
 
     /// <summary>
     /// Get endpoint to get all user salaries
@@ -232,8 +299,6 @@ public class UserController : ControllerBase
         }
         throw new Exception("User Salary not deleted");
     }
-
-
 
 
 

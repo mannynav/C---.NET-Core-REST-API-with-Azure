@@ -226,3 +226,4 @@ C:\Users\manny\OneDrive\Desktop\C#\C #-.NET-Core-REST-API-with-Azure\obj\Debug\n
 C:\Users\manny\OneDrive\Desktop\C#\C #-.NET-Core-REST-API-with-Azure\obj\Debug\net8.0\DotnetAPI.pdb
 C:\Users\manny\OneDrive\Desktop\C#\C #-.NET-Core-REST-API-with-Azure\obj\Debug\net8.0\DotnetAPI.genruntimeconfig.cache
 C:\Users\manny\OneDrive\Desktop\C#\C #-.NET-Core-REST-API-with-Azure\obj\Debug\net8.0\ref\DotnetAPI.dll
+C:\Users\manny\OneDrive\Desktop\C#\C #-.NET-Core-REST-API-with-Azure\obj\Debug\net8.0\DotnetAPI.sourcelink.json
