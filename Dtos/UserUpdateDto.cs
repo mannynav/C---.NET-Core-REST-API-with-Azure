@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace DotnetAPI.Dtos
 {
-    public partial class UserToUpdateLastNameDto : UserUpdateDto
+    public class UserUpdateDto
     {
-        public required string LastName { get; set; }
+        public int UserId { get; set; }
 
     }
 }

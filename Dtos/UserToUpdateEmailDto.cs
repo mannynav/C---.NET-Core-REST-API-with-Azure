@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace DotnetAPI.Dtos
 {
-    public partial class UserToUpdateEmailDto
+    public partial class UserToUpdateEmailDto : UserUpdateDto
     {
-        public int UserId { get; set; }
         public required string Email { get; set; }
 
     }

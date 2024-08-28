@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace DotnetAPI.Dtos
 {
-    public partial class UserToUpdateActiveDto
+    public partial class UserToUpdateActiveDto : UserUpdateDto
     {
-        public int UserId { get; set; }
         public required bool Active { get; set; }
 
     }
